@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>	
+
+	<!-- ##################### MaizeMapping ############################ -->  
+	<node pkg="fre_maize_mapping" name="fre_maize_mapping" type="fre_maize_mapping_node" output="screen" ns="rownavigation">   
+                <param name="frame_id_marker" value="/laserscan_link"/> 		    
+		<remap from="scan" to="/lms100_front/scan"/> 
+		<param name="rowCount" value="6"/>  
+		<param name="rowLength" value="12"/>  
+		<param name="mapResolution" value="200"/>  
+		<param name="mapPadding" value="200"/>  
+		<param name="plantSpacing" value="0.01"/>  
+		<param name="rowSpacing" value="0.6"/>  
+		<param name="pathL2R" value="false"/> 
+	</node>  
+	    
+</launch>
